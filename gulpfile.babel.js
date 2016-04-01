@@ -17,12 +17,12 @@ gulp.task('build-js', () => gulp.src('src/**/*.js')
           .pipe(gulp.dest('build')))
 
 gulp.task('build-html', () => gulp.src('src/**/*.html')
-          .pipe(htmlmin({ collapseWhitespace: true }))
+          .pipe(htmlmin({ collapseWhitespace: true, removeComments: true}))
           .pipe(gulp.dest('build'))
 )
 
 gulp.task('build-styles', () => {
-    gulp.src('src/css/app/**/*.css')
+    gulp.src('src/css/**/*.css')
         .pipe(cleanCSS())
         .pipe(concat('app.css'))
         .pipe(gulp.dest('build/css'))
@@ -33,13 +33,17 @@ gulp.task('build-styles', () => {
         .pipe(gulp.dest('build/css'))
 })
 
+gulp.task('build-static-assets', () => {
+    gulp.src('src/img/**/*')
+        .pipe(gulp.dest('build/img'))
+})
+
 gulp.task('clean-build', () => gulp.src(['build', 'release'], { read: false }).pipe(rimraf()))
 
 gulp.task('zip-release', () => gulp.src('build/**/*')
     .pipe(zip('bundle.zip'))
     .pipe(gulp.dest('release')))
 
-
 /* npm tasks */
 
-gulp.task('build', callback => runSequence('clean-build', 'build-js', 'build-html', 'build-styles', 'zip-release', callback))
+gulp.task('build', callback => runSequence('clean-build', 'build-js', 'build-html', 'build-styles', 'build-static-assets','zip-release', callback))
