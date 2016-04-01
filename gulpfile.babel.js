@@ -7,6 +7,8 @@ import uglify from 'gulp-uglify'
 import rimraf from 'gulp-rimraf'
 import install from 'gulp-install'
 import zip from 'gulp-zip'
+import imagemin from 'gulp-imagemin'
+import pngquant from 'imagemin-pngquant'
 import runSequence from 'run-sequence'
 
 /* Build Tasks */
@@ -34,8 +36,13 @@ gulp.task('build-styles', () => {
 })
 
 gulp.task('build-static-assets', () => {
-    gulp.src('src/img/**/*')
-        .pipe(gulp.dest('build/img'))
+  gulp.src('src/img/**/*')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('build/img'))
 })
 
 gulp.task('clean-build', () => gulp.src(['build', 'release'], { read: false }).pipe(rimraf()))
