@@ -1,4 +1,5 @@
 import gulp from 'gulp'
+import symlink from  'gulp-sym'
 import babel from 'gulp-babel'
 import concat from 'gulp-concat'
 import cleanCSS from 'gulp-clean-css'
@@ -21,6 +22,7 @@ gulp.task('build-js', () => gulp.src('src/**/*.js')
 gulp.task('build-html', () => gulp.src('src/**/*.html')
           .pipe(htmlmin({ collapseWhitespace: true, removeComments: true}))
           .pipe(gulp.dest('build'))
+          .pipe(symlink('build/splash.html', {relative: true}))
 )
 
 gulp.task('build-styles', () => {
