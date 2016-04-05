@@ -7,24 +7,14 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="ico/favicon.png">
 
-        <title>Internet é um direito de todos </title>
+        <title>Internet é um direito humano </title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bubbles.css" rel="stylesheet">
         <link href="css/flexslider.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+
+        <link href="css/landing.css" rel="stylesheet">
         <style>
-         .wrapper {
-             background: #21610B;
-             background: -webkit-linear-gradient(top left, #21610B 0%, #53e3a6 100%);
-             background: linear-gradient(to bottom right, #21610B 0%, #53e3a6 100%);
-             position: absolute;
-             top: 0;
-             left: 0;
-             width: 100%;
-             height: 100%;
-             overflow: hidden;
-         }
          @-webkit-keyframes square {
              0% {
                  -webkit-transform: translateY(0);
@@ -46,46 +36,86 @@
     </head>
 
     <body>
-	<!-- Start home -->
+	    <!-- Start home -->
+            <section class="hero">
+                <h1>
+                    <a href="#home" class="logo margin80"><img src="images/logo.png" class="img-responsive" alt="PalmasNET" /></a><span>Internet é um direito de todos</span>
+                </h1>
 
-	<div class="wrapper">
-	    <div class="container">
-		<div class="row wow fadeInDown" data-wow-delay="0.2s">
-		    <div class="col-md-12">
-			<a href="#home" class="logo margin80"><img src="img/logo.png" class="img-responsive" alt="" /></a>
-		    </div>
-		    <div class="col-md-8 col-md-offset-2 home-headline">
-			<h5> Internet é um direito de todos!!! </h5>
-
-		    </div>
-		</div>
-		<div class="row wow fadeInDown" data-wow-delay="0.2s">
-		    <div class="col-md-12">
-			<a href="$authtarget" type="button" class="btn btn-md btn-success logo margin80" style="background-color: #88C900; 
-                                                                                                                padding: 10px 40px;
-                                                                                                                width: 300px;
-                                                                                                                border-radius: 25px;" >Entrar</a>
-		    </div>
+		<div class="form-controls">
+		    <!-- submit (only for no authentication) -->
+                    <input name="connect" type="submit" value="Entrar" id="connect" class="button requires-tou btn btn-md btn-palmas" />
 		</div>
 
-	    </div>
+                <fieldset class="accept-tou">
+		    <input id="accept-tou" type="checkbox" checked="checked" name="accept-tou" value="yes" />
+		    <label class="normal" >Aceito os <a href="#tou" id="show-tou">Termos de Uso</a></label>
+		</fieldset>
 
-	    <ul class="bg-bubbles">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	    </ul>
-	</div>
-        <script type="text/javascript">
+                <ul class="bg-bubbles">
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+	        </ul>
+            </section>
+            <section class="section">
+                <div class="wrapper">
+                    <h2 class="section__tou">Visao</h2>
+                    <p class="section__intro">
+                        Um bairro 100% conectado, para construir um sistema local de governança colaborativa.
+                    </p>
+                    <div class="box__grid">
+                        <article class="box"><a href="#" class="box__content"><i class="fa fa-lightbulb-o fa-3x"></i>
+                            <h3 class="box__title">Espaços Wifi</h3>
+                            <p>praças, associações, escolas, internet cafe etc. Espaços ondea comunidade tera acesso a wifi gratis, para fomentar a utilização de espaços publicos, criar novas oportunidades de lazer e facilitar as trocas socioculturais na comunidade.</p></a></article>
+                        <article class="box"><a href="#" class="box__content"><i class="fa fa-code fa-3x"></i>
+                            <h3 class="box__title">Serviços de Internet</h3>
+                            <p>investir na infraestrutura local de acesso a internet (Fibra), e trabalhar junto com os ISPs locais e usuários do bairro, para garantir acesso a internet de qualidade para o 100% da população.</p></a>
+                        </article>
+                        <article class="box"><a href="#" class="box__content"><i class="fa fa-mobile fa-3x"></i>
+                            <h3 class="box__title">Intranet</h3>
+                            <p>Estabelecer uma rede de compartilhamento local para garantir acesso as soluções de TI locais, como E-dinheiro, Palmaslab etc, para 100% da comunidade alem de promover a produção de conteúdo e comunicação local.</p></a></article>
+                    </div>
+                </div>
+            </section>
+            <div class="section section--cta">
+                <div class="wrapper">
+                    <h2 class="section__tou" id="tou">TERMOS DE USO</h2>
+                    <p class="section__intro">
+                        A PalmasNet é a internet comunitária oferecida pelo Banco Palmas e fornecida pela PalmasLink.
+                    </p>
+                    <p class="section__intro">
+                        A PalmasNet é a disponibilização de internet gratuita sem fio (Wi-Fi), em locais públicos de alta concentração e circulação de pessoas.
+                    </p>
+                    <p class="section__intro">
+                        A PalmasNet objetiva promover a inclusão digital e social dos cidadãos do Conjunto Palmeiras, em especial dos que ainda não tem acesso, garantindo de forma geral acesso gratuito à internet sem-fio (Wi-Fi) com qualidade. A ferramenta ainda estimula o acesso aos serviços disponibilizados pelo Banco Palmas para o cidadão comum, como o E-Dinheiro, o Ocupa o Cuca e outros aplicativos desenvolvidos pelo PalmasLab, além de ampliar oportunidades em diversas áreas, como, por exemplo, educação, trabalho, turismo, e ainda viabilizar a futura implementação de um sistema de governança colaborativa no bairro. 
+                    </p>
+                    <p class="section__intro">
+                        Ao acessar o Wifi da PalmasNet você estará concordando com estes termos.
+                    </p>
+		    <div class="form-controls">
+		        <!-- submit (only for no authentication) -->
+                        <input name="connect" type="submit" value="Entrar" id="connect" class="button requires-tou btn btn-md btn-palmas" />
+		    </div>
+                </div>
 
-        </script>
+            </div>
+            <div class="footer">
+                <img src="images/logo-palmas.png" class="img-responsive logo-footer" alt="Banco Palmasq" />
+                <img src="images/Logo-BancoPeriferia.png" class="img-responsive logo-footer" alt="Banco Da Periferia" />
+                <img src="images/palmas2.png" class="img-responsive logo-footer" alt="Palmas Lab" />
+                <img src="images/Logo-MAPFRE.png" class="img-responsive logo-footer" alt="MAPFRE" />
+
+                <img src="images/Logo-SENAES.png" class="img-responsive logo-footer" alt="SENAES" />
+            </div>
+
     </body>
 </html>
 

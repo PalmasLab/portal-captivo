@@ -32,7 +32,6 @@ gulp.task('build-html', () => gulp.src('src/**/*.html')
             preserveMediaQueries: true,
             removeHtmlSelectors: false
           }))
-          .pipe(inlineImg('../build'))
           .pipe(gulp.dest('build'))
           .pipe(symlink('build/splash.html', {relative: true}))
 )
@@ -53,13 +52,13 @@ gulp.task('build-styles', () => {
 })
 
 gulp.task('build-static-assets', () => {
-  gulp.src('src/img/**/*')
+  gulp.src('src/images/**/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/images'))
 })
 
 gulp.task('clean-build', () => gulp.src(['build', 'release'], { read: false }).pipe(rimraf()))
