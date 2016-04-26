@@ -102,9 +102,9 @@ body :-ms-input-placeholder {
           animation-duration: 22s;
   background-color: rgba(255, 255, 255, 0.25);
 }
-    .bg-bubbles li:nth-child(5) {
-        animation: square 36s infinite;
-  left: 70%;
+.bg-bubbles li:nth-child(5) {
+    animation: square 36s infinite;
+    left: 70%;
 }
 .bg-bubbles li:nth-child(6) {
   left: 80%;
@@ -120,16 +120,12 @@ body :-ms-input-placeholder {
   width: 160px;
     height: 160px;
     animation: square 42s infinite;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
 }
 .bg-bubbles li:nth-child(8) {
   left: 55%;
   width: 20px;
     height: 20px;
     animation: square 44s infinite;
-  -webkit-animation-delay: 15s;
-          animation-delay: 15s;
   -webkit-animation-duration: 40s;
           animation-duration: 40s;
 }
@@ -149,6 +145,4 @@ body :-ms-input-placeholder {
   width: 160px;
     height: 160px;
     animation: square 52s infinite;
-  -webkit-animation-delay: 11s;
-          animation-delay: 11s;
 }
